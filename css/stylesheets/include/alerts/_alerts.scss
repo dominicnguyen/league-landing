@@ -1,0 +1,66 @@
+@mixin plus_alert(
+  $container_width:$large_logo_dimension,
+  $container_height:$large_logo_dimension,
+  $scale: .7,
+  $border-radius:20px, 
+  $border-width:5px, 
+  $border-color: #eee
+  ){
+  width: $container_width;
+  height: $container_height;
+  $width: ($container_width * $scale) - 2 * $border-width ;
+  $height: ($container_height * $scale) - 2 * $border-width ;
+  $xoffset: ($container_width - ($container_width * $scale)) * .5;
+  $yoffset: ($container_height - ($container_height * $scale)) * .5;
+  position: relative;
+  &:before, &:after{
+    content:'';
+    display: block;
+    @include border-radius($border-radius);
+    border: $border-width dashed $border-color;
+  }
+  &:before{
+    @include position(absolute, $yoffset , 0, 0, $xoffset, $width, $height);
+    z-index: 1;
+  }
+  &:after{
+    @include position(absolute, $yoffset - 1px, 0, 0, $xoffset, $width, $height);
+    border: $border-width dashed darken($border-color, 10%);
+    z-index: 0;
+  }
+  figure{
+    $dimension1: $width * .7;
+    $dimension2: $dimension1 * .3;
+    display: block;
+    @include position(absolute, ($container_width - $dimension1) * .5, auto, auto, ($container_width - $dimension1) * .5, $dimension1, $dimension1);
+    &:before, &:after{
+      content:'';
+      display: block;
+      background: saturate($skyblue, 10%);
+      border-top: 1px solid darken($skyblue, 10%);
+      border-bottom: 1px solid lighten($skyblue, 10%);
+    }
+    &:before{
+      /* horiz */
+      @include position(absolute, ($dimension1 - $dimension2) * .5, auto, auto, 0, $dimension1, $dimension2);
+    }
+    &:after{
+      /* vert */
+      z-index: 1;
+      @include position(absolute, 0, auto, auto, ($dimension1 - $dimension2) * .5, $dimension2, $dimension1);
+    }
+  }
+}
+@mixin css_arrow($type, $color, $x, $y, $size:10px){
+  //Use the x and y coordinates relative to where it is supposed to be positioned
+  //So the rarr is positioned relative right... just look at it!
+  @if $type == "up" {border-color: transparent transparent $color transparent;  top:$y; left:$x; }
+  @else if $type == "left" {border-color: transparent $color transparent transparent;  top:$y; left:$x;}
+  @else if $type == "right" {border-color: transparent transparent transparent $color;  top:$y;   right:$x;}
+  @else if $type == "down" {border-color: $color transparent transparent transparent; bottom:$y; left:$x;}  
+  border-style: solid;
+  border-width: $size;
+  height:0;
+  width:0;
+  position:absolute;
+}

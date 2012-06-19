@@ -1,0 +1,57 @@
+@mixin letterpress($color){
+  @if lightness($color) > 50% {
+    @include text-shadow(
+      rgba(lighten($color, 90%), .7) 0 1px 0,
+      rgba(darken($color, 30%), .1) 0 -1px 0
+    );    
+  } @else {
+    @include text-shadow(    
+      rgba(darken($color, 30%), .5) 0 1px 0  
+    );
+  }
+}
+@mixin border($color, $width: 1px, $emboss: 'emboss'){
+  border-right: $width solid darken($color, 10%);
+  border-left: $width solid darken($color, 10%);
+  @if $emboss == 'emboss'{
+    border-top: $width solid lighten($color, 15%);
+    border-bottom: $width solid darken($color, 30%);    
+  } @else {
+    border-bottom: $width solid lighten($color, 30%);
+    border-top: $width solid darken($color, 30%);
+  }
+}
+@mixin reveal($color :#3f464b ){
+  border-top: 1px solid darken($color, 10%);
+  @include box-shadow(rgba(0,0,0,.3) 0 2px 5px 0 inset);
+  @include background(
+    url('/images/textures/bg_hatch_40x40.png'),
+    $color
+  );
+  @include text-shadow(rgba(0,0,0, .7) 0 1px 3px);
+  color: #fff;
+  clear: both;
+}
+@mixin postit($color:#ffffaa){
+  @include maskbg($color);
+  @include box-sizing(border-box);
+  @include border($color);
+  @include box-shadow(rgba(black, .3) 0 2px 5px 0);
+  padding: 3em;
+  &:before, &:after{
+    content: '';
+    display: block;
+    @include position(absolute, 0, auto, auto, 0, 100%, 100%);
+    @include maskbg($color);
+    @include border($color);
+    @include box-shadow(rgba(black, .2) 0 1px 3px 0);
+  }
+  &:before{
+    @include transform(rotate(1.5deg));
+    z-index: -1;
+  }
+  &:after{
+    @include transform(translate(1px, 4px));
+    z-index: -1;
+  }
+}

@@ -1,0 +1,12 @@
+@mixin maskbg($color: $paper){
+  @include background(
+    url('images/textures/bg_noise_80x80.png') repeat,
+    $color
+  );
+}
+@mixin skybg{
+  @include background(
+    linear-gradient(top, $skyblue, darken($skyblue, 5%) 100%),
+    url('/images/textures/bg_noise_80x80.png') repeat
+  );
+}

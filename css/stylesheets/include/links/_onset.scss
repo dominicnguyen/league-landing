@@ -1,0 +1,93 @@
+@mixin global_btn{
+  line-height: 1em;
+  $real_height:$font-size * 2.5;
+  $text_height: $font-size;
+  $border_sum: 2;
+  $btn_padding_px : ($real_height - $text_height - $border_sum) *.5;
+  $btn_padding_em: $btn_padding_px / $font-size * 1em;
+  padding:$btn_padding_em $btn_padding_em * 2;
+  margin: .25em 0;
+  text-align: center;
+  @include user_select;
+  display: inline-block;
+  border: 1px solid transparent;
+  @include border-radius(3px);
+  @include opacity(1);
+  @include box-sizing(border-box);
+  &:before{margin-right:.7em;}
+  // Bug in FF that adds another inner border
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}
+@mixin onset($color: $onsetcolor){
+  @include background( 
+    linear-gradient(top, saturate(lighten($color, 10%), 15%), $color 50%, darken($color, 10%) 100%),
+    $color
+  );
+  @include border($color, 1px);
+  @include letterpress($color);
+  @if lightness($color) > 50% {
+    color: darken($color, 50%);
+  }@else {
+    color: lighten($color, 90%);
+  }
+  &:hover{
+    @if lightness($color) > 50% {
+      color: darken($color, 90%);
+    }@else {
+      color: lighten($color, 50%);
+    }
+    @include background( 
+      linear-gradient(top, saturate(lighten($color, 20%), 5%), $color 50%, darken($color, 20%) 100%),
+      $color
+    );
+  }
+  &:active {
+    @if lightness($color) > 50% {
+      color: darken($color, 90%);
+    }@else {
+      color: lighten($color, 90%);
+    }
+    @include border($color, 1px, impress);
+    @include box-shadow(
+      rgba(darken($color, 90%), .2) 0 2px 5px 0 inset, 
+      rgba(lighten($color, 90%), .7) 0 1px 0px 0
+    );
+  }
+  &[disabled], &.disabled{
+    @if lightness($color) > 50% {
+      color: darken($color, 50%);
+    }@else {
+      color: lighten($color, 50%);
+    }
+    @include letterpress(desaturate($color, 30%));
+    @include background( 
+      linear-gradient(top, 
+        rgba(saturate(lighten($color, 10%), 15%), .5), 
+        rgba($color, .5) 50%, 
+        rgba(darken($color, 10%), .5) 100%
+      ),
+      desaturate($color, 80%)
+    );
+    @include border($color, 1px, impress);
+    @include box-shadow(
+      rgba(darken($color, 90%), .2) 0 1px 3px 0 inset, 
+      rgba(lighten($color, 90%), .7) 0 1px 0px 0
+    );
+    cursor: not-allowed;
+  }
+}
+/* Really only for dropmenu */
+@mixin onset_current($color: $onsetcolor){
+  @if lightness($color) > 50% {
+    color: darken($color, 90%);
+  }@else {
+    color: lighten($color, 90%);
+  }
+  @include border($color, 1px, impress);
+  @include box-shadow(
+    rgba(darken($color, 90%), .2) 0 2px 5px 0 inset, 
+    rgba(lighten($color, 90%), .7) 0 1px 0px 0
+  );
+}

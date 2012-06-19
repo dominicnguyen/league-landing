@@ -1,0 +1,108 @@
+.lrdiscoverwidget.dark-d{
+  font-size: $font-size *1px;
+  line-height: $line * 1px;
+  @include stdtype;
+  color: #333;
+  margin-bottom: 4.5em;
+  .site{
+    width: 400px;
+    margin: 0 auto !important;
+    padding: 2em 2em 3em;
+    @include box-sizing(border-box);
+    @include maskbg(#ffffaa);
+    @include border-radius(3px);
+    @include box-shadow(rgba(black, .1) 0 1px 3px 0);
+    color: #333;
+    text-shadow: none;
+    text-align: center;
+  }
+  .site-desc{
+    padding-bottom: 1.5em;
+    font-size: $font-size *1px;
+    line-height: $line * 1px;
+    color: #333;
+  }
+  .live-stats{
+    @include small();
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+  }
+  .inviteform{
+    margin-bottom: 0;
+    @include box-sizing(border-box);
+    form{
+      text-align: center;
+      label{
+        float: none;
+        padding-bottom: .75em;
+        font-style: italic;
+        font-weight: bold;
+        @include small;
+      }
+      input{
+        display: inline-block;
+        float: none;
+        &.field{
+          @include stdform;
+          margin-right: .25em;
+          color: #333;
+        }
+        &.submit{
+          @include global_btn;
+          @include onset;
+          width: auto;
+          @include box-shadow(none);
+        }
+      }
+    }
+  }
+  .invite-label{
+    margin-bottom: 1.5em;
+  }
+  .share-link, .share-via-email{
+    width: 100%;
+    padding: 0 1.5em;
+    margin-bottom: 1.5em;
+    @include box-sizing(border-box);
+    color: #333;
+    background: none;
+    border:none;
+    label{
+      font-size: $font-size * 1px;
+      color: #333;
+    }
+    .field-holder{
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      clear: both;
+      text-align: left;
+      background: none;
+      border:none;
+      .field{
+        @include stdform;
+        width: 240px;
+        margin-right: .75em;
+      }
+    }
+    .submit{
+      width: auto;
+      @include global_btn;
+      @include onset;
+      font-size: 12px;
+      @include box-shadow(none);
+    }
+  }
+
+  .site-powered-by{
+    display: none;
+  }
+  .social-links{
+    padding-top: 1.5em;
+    border-top: 1px dotted #ccc;
+    font-weight: bold;
+    @include small;
+    li{border-right: 1px solid #ccc;}
+  }
+}

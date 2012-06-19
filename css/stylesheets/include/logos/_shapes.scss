@@ -1,0 +1,334 @@
+@mixin shield($width: 100px, $height: 100px, $color:red){
+  position: relative;
+  width: $width;
+  height: $height;
+  /*real dimensions*/
+  $shielddeg: 10px;
+  $rwidth: $width - 2*10px;
+  $rheight: floor($height - $height/5);
+  color: $color;
+  background: transparent !important;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-style: solid;
+    @include border-colors(default, transparent, transparent, transparent);
+    border-width: $rheight $shielddeg 0;
+    width: $rwidth;
+  }
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: $rheight;
+    z-index: 1;
+    border-style: solid;
+    @include border-colors(default, transparent, transparent, transparent);
+    border-width: $rheight/5 $rwidth/2 0;
+    margin-left: $shielddeg;
+    width: 0;
+  }
+}//
+@mixin prepare_shield($containerwidth: 200px, $containerheight: 200px, $stroke:10px){
+  $outerwidth:$containerwidth * .6;
+  $outerheight:$containerheight * .5;
+  $border: $stroke;
+  @include shield($outerwidth, $outerheight, #2E66B2);
+  top: ($containerheight - $outerheight) *.5;
+  left: ($containerwidth - $outerwidth) *.5;
+  span{
+    display: block;
+    $innerwidth: $outerwidth - $border * 2;
+    $innerheight: $outerheight - $border * 2;
+    @include shield($innerwidth, $innerheight, #FF5C2B);
+    z-index: 2;
+    left: $border;
+    top: $border;
+  }
+}
+
+@mixin diamond($width: 100px, $height:100px, $color:red){
+  @include position(relative, auto, auto, auto, auto, $width, $height);
+  background: transparent !important;
+  &:before{
+    content:'';
+    @include position(absolute, auto, auto, auto, 0, 0, 0);
+    border-style: solid;
+    @include border-colors(transparent, transparent, default, transparent);
+    border-width: 0 $width/2 $height/2 $width/2;
+    z-index: 1;
+  }
+  &:after{
+    content:'';
+    @include position(absolute, $height/2, auto, auto, 0, 0, 0);
+    border-style: solid;
+    @include border-colors(default, transparent, transparent, transparent);
+    border-width: $height/2 $width/2 0 $width/2;
+    z-index: 1;
+  }
+}
+@mixin prepare_flatdiamond($containerwidth: 200px, $containerheight: 200px, $stroke: 10px){
+  $outerwidth:$containerwidth * .8;
+  $outerheight:$containerheight * .6;
+  $border: $stroke;
+  @include diamond($outerwidth, $outerheight, #2E66B2);
+  top: ($containerheight - $outerheight) *.5;
+  left: ($containerwidth - $outerwidth) *.5;
+  span{
+    display: block;
+    $innerwidth: $outerwidth - $border *2;
+    $innerheight: $outerheight - $border*2;
+    @include diamond($innerwidth, $innerheight, #FF5C2B);
+    z-index: 2;
+    left: $border;
+    top: $border;
+  }
+}
+@mixin prepare_diamond($containerwidth: 200px, $containerheight: 200px, $stroke: 10px){
+  $outerwidth:$containerwidth * .6;
+  $outerheight:$containerheight * .8;
+  $border: $stroke;
+  @include diamond($outerwidth, $outerheight, #2E66B2);
+  top: ($containerheight - $outerheight) *.5;
+  left: ($containerwidth - $outerwidth) *.5;
+  span{
+    display: block;
+    $innerwidth: $outerwidth - $border *2;
+    $innerheight: $outerheight - $border *2;
+    @include diamond($innerwidth, $innerheight, #FF5C2B);
+    z-index: 2;
+    left: $border;
+    top: $border;
+  }
+}
+@mixin darrow($width: 100px, $height:100px, $color:red){
+  position: relative;
+  @include position(relative, auto, auto, auto, auto, $width, $height);
+  background: transparent !important;
+  &:before{
+    content:'';
+    @include position(absolute, auto, auto, auto, auto);
+    display: block;
+    width: 0; 
+    height: 0; 
+    border-style: solid;
+    @include border-colors(default, transparent, transparent, transparent);
+    border-width: $height  $width/2 0 $width/2;
+  }
+}
+@mixin prepare_darrow($containerwidth: 200px, $containerheight: 200px, $stroke: 10px){
+  $cossixty:.86;/*math doesnt seem to work with scout*/
+  $scale: .7; /*change this to affect total size*/
+  $outerwidth:$containerwidth * $scale;
+  $outerheight:$containerheight * $scale * $cossixty; /*makes equilateral tri*/
+  $border: $stroke;
+  @include darrow($outerwidth, $outerheight, #2E66B2);
+  top: ($containerheight - $outerheight) * .6;
+  left: ($containerwidth - $outerwidth) *.5;
+  span{
+    $tanthirty: .57;
+    display: block;
+    $innerwidth: $outerwidth - $border*2;
+    $innerheight: $outerheight - $border*2;
+    @include darrow($innerwidth, $innerheight, #FF5C2B);
+    z-index: 2;
+    left: $border;
+    top: $border * $tanthirty;
+  }
+}
+@mixin uarrow($width: 100px, $height:100px, $color:red){
+  @include position(absolute, auto, auto, auto, auto, $width, $height);
+  background: transparent !important;
+  &:before{
+    content:'';
+    @include position(absolute, auto, auto, auto, auto);
+    display: block;
+    width: 0; 
+    height: 0; 
+    border-style: solid;
+    @include border-colors(transparent, transparent, default, transparent);
+    border-width: 0  $width/2 $height $width/2;
+  }
+}
+@mixin prepare_uarrow($containerwidth: 200px, $containerheight: 200px, $stroke: 10px){
+  $cossixty:.86;/*math doesnt seem to work with scout*/
+  $scale: .7; /*change this to affect total size*/
+  $outerwidth:$containerwidth * $scale;
+  $outerheight:$containerheight * $scale * $cossixty; /*makes equilateral tri*/
+  $border: $stroke;
+  @include uarrow($outerwidth, $outerheight, #2E66B2);
+  top: ($containerheight - $outerheight) * .3;
+  left: ($containerwidth - $outerwidth) *.5;
+  span{
+    display: block;
+    $innerwidth: $outerwidth - $border*2;
+    $innerheight: $outerheight - $border*2;
+    @include uarrow($innerwidth, $innerheight, #FF5C2B);
+    z-index: 2;
+    left: $border;
+    top: $border;
+  } 
+}
+@mixin circle($width: 100px, $height:100px, $color:red, $radius: $width/2){
+  @include position(absolute, auto, auto, auto, auto, $width, $height);
+  background: $color;
+  @include border-radius($radius);
+}
+@mixin prepare_circle($containerwidth: 200px, $containerheight: 200px, $stroke: 10px){
+  $scale: .7; /*change this to affect total size*/
+  $outerwidth:$containerwidth * $scale;
+  $outerheight:$containerheight * $scale;
+  $border: $stroke;
+  @include circle($outerwidth, $outerheight, #2E66B2);
+  top: ($containerheight - $outerheight) * .5;
+  left: ($containerwidth - $outerwidth) *.5;
+  span{
+    display: block;
+    $innerwidth: $outerwidth - $border*2;
+    $innerheight: $outerheight - $border*2;
+    @include circle($innerwidth, $innerheight, #FF5C2B);
+    z-index: 2;
+    left: $border;
+    top: $border;
+  }
+}
+@mixin prepare_flatcircle($containerwidth: 200px, $containerheight: 200px, $stroke: 10px){
+  $outerwidth:$containerwidth * .8;
+  $outerheight:$containerheight * .5;
+  $border: $stroke;
+  @include circle($outerwidth, $outerheight, #2E66B2, 50%);
+  top: ($containerheight - $outerheight) * .5;
+  left: ($containerwidth - $outerwidth) *.5;
+  span{
+    display: block;
+    $innerwidth: $outerwidth - $border*2;
+    $innerheight: $outerheight - $border*2;
+    @include circle($innerwidth, $innerheight, #FF5C2B, 50%);
+    z-index: 2;
+    left: $border;
+    top: $border;
+  }
+}
+
+@mixin national($width: 100px, $height:100px, $color:red){
+  @include position(absolute, 50%, auto, auto, auto, $width, $height);
+  background: transparent !important;
+  
+  &:before, &:after{
+    content:'';
+    @include transform(skew(-30deg));
+    border-style: solid;
+    border-width: 0.5 * $height 0.45 * 0.5 * $width;
+  }
+  &:before{
+    @include position(absolute, auto, auto, auto, 0, 0, 0);
+    @include border-radius(5px 0 0 5px);
+  }
+  &:after{
+    @include position(absolute, auto, 0, auto, auto, 0, 0);
+    @include border-radius( 0 5px 5px 0);
+  }
+}
+@mixin prepare_national($containerwidth: 200px, $containerheight: 200px, $stroke: 10px){
+  $outerwidth:$containerwidth * .5;
+  $outerheight:$containerheight * .5;
+  $border: $stroke;
+  @include national($outerwidth, $outerheight, #2E66B2);
+  top: ($containerheight - $outerheight) * .5;
+  left: ($containerwidth - $outerwidth) *.5;
+  span{
+    display: block;
+    $innerwidth: $outerwidth - $border*2;
+    $innerheight: $outerheight - $border*2;
+    @include national($innerwidth, $innerheight, #FF5C2B);
+    z-index: 2;
+    left: $border;
+    top: $border;
+  }
+}
+@mixin bolt($width: 100px, $height:100px, $color:red){
+  @include position(absolute, auto, auto, auto, auto, $width, $height);
+  background: transparent !important;
+  &:before{
+    content:'';
+    border-style: solid;
+    border-width: 0.2 * $width 0.25 * $height;
+    @include position(absolute, auto, auto, auto, 50%/2, 0, 0);
+    @include transform(skew(-30deg));
+  }
+  &:after{
+    content:'';
+    @include position(absolute, 40%, auto, auto, 50%/2, 0, 0);
+    @include transform(skew(-20deg));
+    border-top-style: solid;
+    border-top-width: $height* .6;
+    border-right: $width/2 solid transparent;
+  }
+}
+@mixin prepare_bolt($containerwidth: 200px, $containerheight: 200px, $stroke: 10px){
+  $outerwidth:$containerwidth * .7;
+  $outerheight:$containerheight * .7;
+  $border: $stroke;
+  @include bolt($outerwidth, $outerheight, #2E66B2);
+  top: ($containerheight - $outerheight) * .5;
+  left: ($containerwidth - $outerwidth) *.5;
+  span{
+    display: block;
+    $innerwidth: $outerwidth - $border;
+    $innerheight: $outerheight - $border;
+    @include bolt($innerwidth, $innerheight, #FF5C2B);
+    z-index: 2;
+    left: $border;
+    top: $border * .5;
+  }
+}
+
+
+@mixin crown($width: 100px, $height:100px, $color:red){
+  @include position(absolute, 25%, auto, auto, auto, 0, 0);
+  background: transparent !important;
+  border-style: solid;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+/*  border-bottom-color: transparent;*/
+  border-width: $height* .5;
+  &:before{
+    content:'';
+    @include position(absolute, auto, auto, auto, -0.5 * $width, 0, 0);
+    border-style: solid;
+    border-width: 0.25 * $height 0.25 * $width;
+    border-top-color: transparent;
+    border-right-color: transparent;    
+  }
+  &:after{
+    content:'';
+    @include position(absolute, auto, -0.5 * $width, auto, auto, 0, 0);
+    border-style: solid;
+    border-width: 0.25 * $height 0.25 * $width;
+    border-top-color: transparent;
+    border-left-color: transparent;    
+  }
+}
+
+@mixin prepare_crown($containerwidth: 200px, $containerheight: 200px, $stroke: 10px){
+  $outerwidth:$containerwidth * .7;
+  $outerheight:$containerheight * .7;
+  $border: $stroke;
+  width: 0;
+  height: 0;
+  margin-top: $outerheight * -.5;
+  margin-left: ($containerwidth - $outerwidth) *.5;
+  @include crown($outerwidth, $outerheight, #2E66B2);
+  span{
+    display: block;
+    $innerwidth: $outerwidth;
+    $innerheight: $outerheight;
+    @include crown($innerwidth, $innerheight, #FF5C2B);
+    z-index: 2;
+    left: $outerwidth * -.5;
+    margin-top: $innerheight *-.5 + $border;
+  }
+
+}

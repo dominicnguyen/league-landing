@@ -1,0 +1,93 @@
+$experimental-support-for-svg: true;
+
+
+@import 'compass/reset';
+@import 'compass/css3';
+@import "compass/css3/transform";
+
+@import 'stylesheets/include/helpers';
+@import 'stylesheets/include/colors';
+@import 'stylesheets/include/textures';
+@import 'stylesheets/include/paragraphs';
+@import 'stylesheets/include/bevel';
+@import 'stylesheets/include/alerts/alerts';
+@import 'stylesheets/include/logos/sizes';
+@import 'stylesheets/include/logos/shapes';
+@import 'stylesheets/include/icons/icons';
+@import 'stylesheets/include/icons';
+@import 'stylesheets/include/links/onset';
+@import 'stylesheets/include/links/textlink';
+@import 'stylesheets/include/forms/stdform';
+@import 'stylesheets/include/forms/too_long';
+
+@import 'stylesheets/base/boilerplate';
+
+@import 'stylesheets/base/layout/intermediate';
+@import 'stylesheets/base/layout/transition';
+@import 'stylesheets/base/forms/forms';
+
+@import 'stylesheets/base/home';
+@import 'stylesheets/base/launchrock';
+
+body {
+  color: #333;
+  @include stdtype;
+  font-size: $font-size * 1px;
+  line-height: $line  * 1px;
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+header{
+  height: 4.5em;
+  @include position(absolute, 0, 0, 0, 0, 100%, 4.5em);
+  padding-top: .75em;
+  @include box-sizing(border-box);
+  @include skybg;
+}
+
+article{
+  @include maskbg;
+  @include position(absolute, 4.5em, 0, 0, 0);
+  padding: 3em 0 9em;
+  overflow: auto;
+}
+
+h1{ @include h1(no);}
+h2{ @include h2(no);}
+h3{ @include h3(no);}
+h4{ @include h4(no);}
+small{ @include small(no);}
+.huge { @include huge(no);} 
+
+a, button {
+  outline: none;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+  @include transition(color 500ms ease);
+  @include stdlink;
+  &.inverse{ @include inverse;}
+  &.inset {@include inset;}
+  &.btn{
+    font-weight: bold;
+    @include global_btn;
+    &.default, &.fwd{@include onset($onsetcolor);}
+    &.facebook{@include onset($fbhex);}
+    &.twitter{@include onset($twhex);}
+    &.google{@include onset($gohex);}
+    &.back, &.secondary{
+      @include onset(#ccc);
+    }
+    &.back:before{content: '\2190';}
+    &.fwd:after{content: '\2192';}
+  }
+}
