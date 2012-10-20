@@ -61,6 +61,28 @@ article{
   overflow: auto;
 }
 
+.alternative {
+  width: 400px;
+  margin: 0 auto;
+  padding: 2em 2em;
+  @include box-sizing(border-box);
+  @include maskbg(#ffffaa);
+  @include border-radius(3px);
+  @include box-shadow(rgba(black, .1) 0 1px 3px 0);
+  color: #333;
+  text-shadow: none;
+  text-align: center;
+  p {
+    margin-bottom: 1em;
+  }
+  a {
+    @include global_btn;
+    @include onset;
+    width: auto;
+    @include box-shadow(none);
+  }
+}
+
 h1{ @include h1(no);}
 h2{ @include h2(no);}
 h3{ @include h3(no);}

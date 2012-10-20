@@ -1,4 +1,4 @@
-/* line 17, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,45 +20,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 20, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 20, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
   line-height: 1;
 }
 
-/* line 22, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 24, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 26, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 28, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 101, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 101, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 30, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 114, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 114, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -3493,10 +3493,11 @@ td {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   font-weight: bold;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
+  -webkit-border-radius: 5px;
   -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
   border-radius: 5px;
   background: #ff855f;
   color: #fff;
@@ -3557,9 +3558,8 @@ td {
 /* line 1, stylesheets/base/layout/_transition.scss */
 .container {
   left: 0;
-  -webkit-transition: all 500ms cubic-bezier(0.51, 0, 0.6, 1) 0ms;
   -moz-transition: all 500ms cubic-bezier(0.51, 0, 0.6, 1) 0ms;
-  -ms-transition: all 500ms cubic-bezier(0.51, 0, 0.6, 1) 0ms;
+  -webkit-transition: all 500ms cubic-bezier(0.51, 0, 0.6, 1) 0ms;
   -o-transition: all 500ms cubic-bezier(0.51, 0, 0.6, 1) 0ms;
   transition: all 500ms cubic-bezier(0.51, 0, 0.6, 1) 0ms;
 }
@@ -3588,10 +3588,10 @@ body:not(.transitioning) .next_page {
   left: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -webkit-transform: scale(2);
   -moz-transform: scale(2);
-  -ms-transform: scale(2);
+  -webkit-transform: scale(2);
   -o-transform: scale(2);
+  -ms-transform: scale(2);
   transform: scale(2);
 }
 
@@ -3620,29 +3620,29 @@ body:not(.transitioning) .next_page {
 .loading.next_page, .signin.next_page, .not_authorized .home.next_page {
   left: 0;
   opacity: 0;
-  -webkit-transform: scale(2);
   -moz-transform: scale(2);
-  -ms-transform: scale(2);
+  -webkit-transform: scale(2);
   -o-transform: scale(2);
+  -ms-transform: scale(2);
   transform: scale(2);
 }
 /* line 78, stylesheets/base/layout/_transition.scss */
 .transitioning .loading.next_page, .transitioning .signin.next_page, .transitioning .not_authorized .home.next_page {
   opacity: 1;
-  -webkit-transform: scale(1);
   -moz-transform: scale(1);
-  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
   -o-transform: scale(1);
+  -ms-transform: scale(1);
   transform: scale(1);
 }
 /* line 85, stylesheets/base/layout/_transition.scss */
 .loading + .container.next_page, .signin + .container.next_page, .not_authorized .home + .container.next_page {
   left: 0;
   opacity: 0;
-  -webkit-transform: scale(1);
   -moz-transform: scale(1);
-  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
   -o-transform: scale(1);
+  -ms-transform: scale(1);
   transform: scale(1);
 }
 /* line 89, stylesheets/base/layout/_transition.scss */
@@ -3653,25 +3653,26 @@ body:not(.transitioning) .next_page {
 /* line 1, stylesheets/base/forms/_forms.scss */
 textarea {
   background: white;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px inset;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px inset;
+  -o-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px inset;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px inset;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -webkit-background-size: auto;
   -moz-background-size: auto;
+  -webkit-background-size: auto;
   -o-background-size: auto;
   background-size: auto;
-  -webkit-transition: border-color 1s ease;
   -moz-transition: border-color 1s ease;
-  -ms-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
   -o-transition: border-color 1s ease;
   transition: border-color 1s ease;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
+  -webkit-border-radius: 5px;
   -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
   border-radius: 5px;
   margin: .25em 0;
   line-height: 1em;
@@ -3694,8 +3695,9 @@ textarea {
 /* line 16, stylesheets/include/forms/_stdform.scss */
 textarea:focus {
   border: 1px solid rgba(102, 204, 255, 0.9);
-  -webkit-box-shadow: rgba(102, 204, 255, 0.3) 0 0px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px inset;
   -moz-box-shadow: rgba(102, 204, 255, 0.3) 0 0px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px inset;
+  -webkit-box-shadow: rgba(102, 204, 255, 0.3) 0 0px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px inset;
+  -o-box-shadow: rgba(102, 204, 255, 0.3) 0 0px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px inset;
   box-shadow: rgba(102, 204, 255, 0.3) 0 0px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px inset;
 }
 /* line 21, stylesheets/include/forms/_stdform.scss */
@@ -3713,13 +3715,15 @@ textarea:required::-webkit-validation-bubble-message {
   color: #333;
   background: #ff6;
   border: 0px solid transparent;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
+  -webkit-border-radius: 3px;
   -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
+  -o-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
 }
 /* line 35, stylesheets/include/forms/_stdform.scss */
@@ -3765,25 +3769,26 @@ textarea.new {
 /* line 9, stylesheets/base/forms/_forms.scss */
 input:not([type=checkbox]):not([type=radio]) {
   background: white;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px inset;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px inset;
+  -o-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px inset;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px inset;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -webkit-background-size: auto;
   -moz-background-size: auto;
+  -webkit-background-size: auto;
   -o-background-size: auto;
   background-size: auto;
-  -webkit-transition: border-color 1s ease;
   -moz-transition: border-color 1s ease;
-  -ms-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
   -o-transition: border-color 1s ease;
   transition: border-color 1s ease;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
+  -webkit-border-radius: 5px;
   -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
   border-radius: 5px;
   margin: .25em 0;
   line-height: 1em;
@@ -3804,8 +3809,9 @@ input:not([type=checkbox]):not([type=radio]) {
 /* line 16, stylesheets/include/forms/_stdform.scss */
 input:not([type=checkbox]):not([type=radio]):focus {
   border: 1px solid rgba(102, 204, 255, 0.9);
-  -webkit-box-shadow: rgba(102, 204, 255, 0.3) 0 0px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px inset;
   -moz-box-shadow: rgba(102, 204, 255, 0.3) 0 0px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px inset;
+  -webkit-box-shadow: rgba(102, 204, 255, 0.3) 0 0px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px inset;
+  -o-box-shadow: rgba(102, 204, 255, 0.3) 0 0px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px inset;
   box-shadow: rgba(102, 204, 255, 0.3) 0 0px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px inset;
 }
 /* line 21, stylesheets/include/forms/_stdform.scss */
@@ -3823,13 +3829,15 @@ input:not([type=checkbox]):not([type=radio]):required::-webkit-validation-bubble
   color: #333;
   background: #ff6;
   border: 0px solid transparent;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
+  -webkit-border-radius: 3px;
   -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
+  -o-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
 }
 /* line 35, stylesheets/include/forms/_stdform.scss */
@@ -3958,13 +3966,15 @@ form.disabled button {
   border-left: 1px solid #ff5e2c;
   border-top: 1px solid #ffbfac;
   border-bottom: 1px solid #c52f00;
-  -webkit-border-radius: 3px 3px 0 0;
   -moz-border-radius: 3px 3px 0 0;
-  -ms-border-radius: 3px 3px 0 0;
+  -webkit-border-radius: 3px 3px 0 0;
   -o-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  -khtml-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
-  -webkit-box-shadow: rgba(255, 250, 248, 0.3) 0 -1px 0 0 inset, rgba(0, 0, 0, 0.2) 0 1px 3px 0;
   -moz-box-shadow: rgba(255, 250, 248, 0.3) 0 -1px 0 0 inset, rgba(0, 0, 0, 0.2) 0 1px 3px 0;
+  -webkit-box-shadow: rgba(255, 250, 248, 0.3) 0 -1px 0 0 inset, rgba(0, 0, 0, 0.2) 0 1px 3px 0;
+  -o-box-shadow: rgba(255, 250, 248, 0.3) 0 -1px 0 0 inset, rgba(0, 0, 0, 0.2) 0 1px 3px 0;
   box-shadow: rgba(255, 250, 248, 0.3) 0 -1px 0 0 inset, rgba(0, 0, 0, 0.2) 0 1px 3px 0;
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmODU1ZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZjNWYyZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff855f), color-stop(100%, #fc5f2f));
@@ -4058,13 +4068,15 @@ form.disabled button {
   display: inline-block;
   width: 100%;
   height: 100%;
-  -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
-  -ms-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
   -o-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -khtml-border-radius: 0.5em;
   border-radius: 0.5em;
-  -webkit-box-shadow: rgba(252, 95, 47, 0.9) 0 0 0 2px;
   -moz-box-shadow: rgba(252, 95, 47, 0.9) 0 0 0 2px;
+  -webkit-box-shadow: rgba(252, 95, 47, 0.9) 0 0 0 2px;
+  -o-box-shadow: rgba(252, 95, 47, 0.9) 0 0 0 2px;
   box-shadow: rgba(252, 95, 47, 0.9) 0 0 0 2px;
 }
 
@@ -4092,10 +4104,11 @@ form.disabled button {
   user-select: none;
   display: inline-block;
   border: 1px solid transparent;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
+  -webkit-border-radius: 3px;
   -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
   border-radius: 3px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
@@ -4284,7 +4297,7 @@ form.disabled button {
   line-height: 24px;
   font-family: 'Lato', Helvetica, sans-serif;
   color: #333;
-  margin-bottom: 4.5em;
+  margin-bottom: 2.5em;
 }
 /* line 7, stylesheets/base/_launchrock.scss */
 .lrdiscoverwidget.dark-d .site {
@@ -4295,13 +4308,15 @@ form.disabled button {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   background: url("images/textures/bg_noise_80x80.png") repeat, #ffffaa;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
+  -webkit-border-radius: 3px;
   -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0;
   color: #333;
   text-shadow: none;
@@ -4350,25 +4365,26 @@ form.disabled button {
 /* line 46, stylesheets/base/_launchrock.scss */
 .lrdiscoverwidget.dark-d .inviteform form input.field {
   background: white;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px inset;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px inset;
+  -o-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px inset;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px inset;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -webkit-background-size: auto;
   -moz-background-size: auto;
+  -webkit-background-size: auto;
   -o-background-size: auto;
   background-size: auto;
-  -webkit-transition: border-color 1s ease;
   -moz-transition: border-color 1s ease;
-  -ms-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
   -o-transition: border-color 1s ease;
   transition: border-color 1s ease;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
+  -webkit-border-radius: 5px;
   -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
   border-radius: 5px;
   margin: .25em 0;
   line-height: 1em;
@@ -4390,8 +4406,9 @@ form.disabled button {
 /* line 16, stylesheets/include/forms/_stdform.scss */
 .lrdiscoverwidget.dark-d .inviteform form input.field:focus {
   border: 1px solid rgba(102, 204, 255, 0.9);
-  -webkit-box-shadow: rgba(102, 204, 255, 0.3) 0 0px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px inset;
   -moz-box-shadow: rgba(102, 204, 255, 0.3) 0 0px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px inset;
+  -webkit-box-shadow: rgba(102, 204, 255, 0.3) 0 0px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px inset;
+  -o-box-shadow: rgba(102, 204, 255, 0.3) 0 0px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px inset;
   box-shadow: rgba(102, 204, 255, 0.3) 0 0px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px inset;
 }
 /* line 21, stylesheets/include/forms/_stdform.scss */
@@ -4409,13 +4426,15 @@ form.disabled button {
   color: #333;
   background: #ff6;
   border: 0px solid transparent;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
+  -webkit-border-radius: 3px;
   -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
+  -o-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
 }
 /* line 35, stylesheets/include/forms/_stdform.scss */
@@ -4466,10 +4485,11 @@ form.disabled button {
   user-select: none;
   display: inline-block;
   border: 1px solid transparent;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
+  -webkit-border-radius: 3px;
   -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
   border-radius: 3px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
@@ -4490,8 +4510,9 @@ form.disabled button {
   text-shadow: rgba(0, 61, 102, 0.5) 0 1px 0;
   color: white;
   width: auto;
-  -webkit-box-shadow: none;
   -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
   box-shadow: none;
 }
 /* line 17, stylesheets/include/links/_onset.scss */
@@ -4520,8 +4541,9 @@ form.disabled button {
   border-left: 1px solid #007acc;
   border-bottom: 1px solid #99d6ff;
   border-top: 1px solid #003d66;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
 }
 /* line 58, stylesheets/include/links/_onset.scss */
@@ -4539,8 +4561,9 @@ form.disabled button {
   border-left: 1px solid #007acc;
   border-bottom: 1px solid #99d6ff;
   border-top: 1px solid #003d66;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   cursor: not-allowed;
 }
@@ -4578,25 +4601,26 @@ form.disabled button {
 /* line 83, stylesheets/base/_launchrock.scss */
 .lrdiscoverwidget.dark-d .share-link .field-holder .field, .lrdiscoverwidget.dark-d .share-via-email .field-holder .field {
   background: white;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px inset;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px inset;
+  -o-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px inset;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px inset;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -webkit-background-size: auto;
   -moz-background-size: auto;
+  -webkit-background-size: auto;
   -o-background-size: auto;
   background-size: auto;
-  -webkit-transition: border-color 1s ease;
   -moz-transition: border-color 1s ease;
-  -ms-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
   -o-transition: border-color 1s ease;
   transition: border-color 1s ease;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
+  -webkit-border-radius: 5px;
   -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
   border-radius: 5px;
   margin: .25em 0;
   line-height: 1em;
@@ -4618,8 +4642,9 @@ form.disabled button {
 /* line 16, stylesheets/include/forms/_stdform.scss */
 .lrdiscoverwidget.dark-d .share-link .field-holder .field:focus, .lrdiscoverwidget.dark-d .share-via-email .field-holder .field:focus {
   border: 1px solid rgba(102, 204, 255, 0.9);
-  -webkit-box-shadow: rgba(102, 204, 255, 0.3) 0 0px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px inset;
   -moz-box-shadow: rgba(102, 204, 255, 0.3) 0 0px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px inset;
+  -webkit-box-shadow: rgba(102, 204, 255, 0.3) 0 0px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px inset;
+  -o-box-shadow: rgba(102, 204, 255, 0.3) 0 0px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px inset;
   box-shadow: rgba(102, 204, 255, 0.3) 0 0px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px inset;
 }
 /* line 21, stylesheets/include/forms/_stdform.scss */
@@ -4637,13 +4662,15 @@ form.disabled button {
   color: #333;
   background: #ff6;
   border: 0px solid transparent;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
+  -webkit-border-radius: 3px;
   -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
+  -o-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
 }
 /* line 35, stylesheets/include/forms/_stdform.scss */
@@ -4695,10 +4722,11 @@ form.disabled button {
   user-select: none;
   display: inline-block;
   border: 1px solid transparent;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
+  -webkit-border-radius: 3px;
   -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
   border-radius: 3px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
@@ -4719,8 +4747,9 @@ form.disabled button {
   text-shadow: rgba(0, 61, 102, 0.5) 0 1px 0;
   color: white;
   font-size: 12px;
-  -webkit-box-shadow: none;
   -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
   box-shadow: none;
 }
 /* line 17, stylesheets/include/links/_onset.scss */
@@ -4749,8 +4778,9 @@ form.disabled button {
   border-left: 1px solid #007acc;
   border-bottom: 1px solid #99d6ff;
   border-top: 1px solid #003d66;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
 }
 /* line 58, stylesheets/include/links/_onset.scss */
@@ -4768,8 +4798,9 @@ form.disabled button {
   border-left: 1px solid #007acc;
   border-bottom: 1px solid #99d6ff;
   border-top: 1px solid #003d66;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   cursor: not-allowed;
 }
@@ -4847,50 +4878,172 @@ article {
 }
 
 /* line 64, style.scss */
+.alternative {
+  width: 400px;
+  margin: 0 auto;
+  padding: 2em 2em;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background: url("images/textures/bg_noise_80x80.png") repeat, #ffffaa;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0;
+  color: #333;
+  text-shadow: none;
+  text-align: center;
+}
+/* line 75, style.scss */
+.alternative p {
+  margin-bottom: 1em;
+}
+/* line 78, style.scss */
+.alternative a {
+  line-height: 1em;
+  padding: 0.688em 1.375em;
+  margin: .25em 0;
+  text-align: center;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  display: inline-block;
+  border: 1px solid transparent;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMzYWRmZiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMDA5OWZmIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDA3YWNjIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), #0099ff;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #33adff), color-stop(50%, #0099ff), color-stop(100%, #007acc)), #0099ff;
+  background: -webkit-linear-gradient(top, #33adff, #0099ff 50%, #007acc 100%), #0099ff;
+  background: -moz-linear-gradient(top, #33adff, #0099ff 50%, #007acc 100%), #0099ff;
+  background: -o-linear-gradient(top, #33adff, #0099ff 50%, #007acc 100%), #0099ff;
+  background: -ms-linear-gradient(top, #33adff, #0099ff 50%, #007acc 100%), #0099ff;
+  background: linear-gradient(top, #33adff, #0099ff 50%, #007acc 100%), #0099ff;
+  border-right: 1px solid #007acc;
+  border-left: 1px solid #007acc;
+  border-top: 1px solid #4db8ff;
+  border-bottom: 1px solid #003d66;
+  text-shadow: rgba(0, 61, 102, 0.5) 0 1px 0;
+  color: white;
+  width: auto;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+/* line 17, stylesheets/include/links/_onset.scss */
+.alternative a:before {
+  margin-right: .7em;
+}
+/* line 19, stylesheets/include/links/_onset.scss */
+.alternative a::-moz-focus-inner {
+  border: 0;
+}
+/* line 35, stylesheets/include/links/_onset.scss */
+.alternative a:hover {
+  color: white;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2YzJmZiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMDA5OWZmIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDA1Yzk5Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), #0099ff;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #66c2ff), color-stop(50%, #0099ff), color-stop(100%, #005c99)), #0099ff;
+  background: -webkit-linear-gradient(top, #66c2ff, #0099ff 50%, #005c99 100%), #0099ff;
+  background: -moz-linear-gradient(top, #66c2ff, #0099ff 50%, #005c99 100%), #0099ff;
+  background: -o-linear-gradient(top, #66c2ff, #0099ff 50%, #005c99 100%), #0099ff;
+  background: -ms-linear-gradient(top, #66c2ff, #0099ff 50%, #005c99 100%), #0099ff;
+  background: linear-gradient(top, #66c2ff, #0099ff 50%, #005c99 100%), #0099ff;
+}
+/* line 46, stylesheets/include/links/_onset.scss */
+.alternative a:active {
+  color: white;
+  border-right: 1px solid #007acc;
+  border-left: 1px solid #007acc;
+  border-bottom: 1px solid #99d6ff;
+  border-top: 1px solid #003d66;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+}
+/* line 58, stylesheets/include/links/_onset.scss */
+.alternative a[disabled], .alternative a.disabled {
+  color: white;
+  text-shadow: rgba(15, 58, 87, 0.5) 0 1px 0;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0icmdiYSg1MSwgMTczLCAyNTUsIDAuNSkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0icmdiYSgwLCAxNTMsIDI1NSwgMC41KSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0icmdiYSgwLCAxMjIsIDIwNCwgMC41KSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), #668599;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(51, 173, 255, 0.5)), color-stop(50%, rgba(0, 153, 255, 0.5)), color-stop(100%, rgba(0, 122, 204, 0.5))), #668599;
+  background: -webkit-linear-gradient(top, rgba(51, 173, 255, 0.5), rgba(0, 153, 255, 0.5) 50%, rgba(0, 122, 204, 0.5) 100%), #668599;
+  background: -moz-linear-gradient(top, rgba(51, 173, 255, 0.5), rgba(0, 153, 255, 0.5) 50%, rgba(0, 122, 204, 0.5) 100%), #668599;
+  background: -o-linear-gradient(top, rgba(51, 173, 255, 0.5), rgba(0, 153, 255, 0.5) 50%, rgba(0, 122, 204, 0.5) 100%), #668599;
+  background: -ms-linear-gradient(top, rgba(51, 173, 255, 0.5), rgba(0, 153, 255, 0.5) 50%, rgba(0, 122, 204, 0.5) 100%), #668599;
+  background: linear-gradient(top, rgba(51, 173, 255, 0.5), rgba(0, 153, 255, 0.5) 50%, rgba(0, 122, 204, 0.5) 100%), #668599;
+  border-right: 1px solid #007acc;
+  border-left: 1px solid #007acc;
+  border-bottom: 1px solid #99d6ff;
+  border-top: 1px solid #003d66;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  cursor: not-allowed;
+}
+
+/* line 86, style.scss */
 h1 {
   font-size: 1.75em;
   line-height: 1.714em;
 }
 
-/* line 65, style.scss */
+/* line 87, style.scss */
 h2 {
   font-size: 1.375em;
   line-height: 1.091em;
 }
 
-/* line 66, style.scss */
+/* line 88, style.scss */
 h3 {
   font-size: 1.125em;
   line-height: 1.333em;
 }
 
-/* line 67, style.scss */
+/* line 89, style.scss */
 h4 {
   font-size: 1em;
   line-height: 1.5em;
 }
 
-/* line 68, style.scss */
+/* line 90, style.scss */
 small {
   font-size: 0.813em;
   line-height: 1.846em;
 }
 
-/* line 69, style.scss */
+/* line 91, style.scss */
 .huge {
   font-size: 2.875em;
   line-height: 1.043em;
 }
 
-/* line 71, style.scss */
+/* line 93, style.scss */
 a, button {
   outline: none;
   text-decoration: none;
   font-size: inherit;
   font-family: inherit;
-  -webkit-transition: color 500ms ease;
   -moz-transition: color 500ms ease;
-  -ms-transition: color 500ms ease;
+  -webkit-transition: color 500ms ease;
   -o-transition: color 500ms ease;
   transition: color 500ms ease;
   -webkit-user-select: none;
@@ -4909,7 +5062,7 @@ a:hover, button:hover {
 a:active, button:active {
   color: #666666;
 }
-/* line 78, style.scss */
+/* line 100, style.scss */
 a.inverse, button.inverse {
   color: white;
 }
@@ -4922,7 +5075,7 @@ a.inverse:active, button.inverse:active {
   color: black;
   text-shadow: rgba(0, 0, 0, 0.5) 0 1px 0;
 }
-/* line 79, style.scss */
+/* line 101, style.scss */
 a.inset, button.inset {
   text-shadow: rgba(255, 255, 255, 0.7) 0 1px 0, rgba(77, 77, 77, 0.1) 0 -1px 0;
   color: #666666;
@@ -4942,7 +5095,7 @@ a.inset[disabled], a.inset.disabled, button.inset[disabled], button.inset.disabl
   opacity: 0.5;
   cursor: not-allowed;
 }
-/* line 80, style.scss */
+/* line 102, style.scss */
 a.btn, button.btn {
   font-weight: bold;
   line-height: 1em;
@@ -4956,10 +5109,11 @@ a.btn, button.btn {
   user-select: none;
   display: inline-block;
   border: 1px solid transparent;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
+  -webkit-border-radius: 3px;
   -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
   border-radius: 3px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
@@ -4975,7 +5129,7 @@ a.btn:before, button.btn:before {
 a.btn::-moz-focus-inner, button.btn::-moz-focus-inner {
   border: 0;
 }
-/* line 83, style.scss */
+/* line 105, style.scss */
 a.btn.default, a.btn.fwd, button.btn.default, button.btn.fwd {
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMzYWRmZiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMDA5OWZmIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDA3YWNjIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), #0099ff;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #33adff), color-stop(50%, #0099ff), color-stop(100%, #007acc)), #0099ff;
@@ -5009,8 +5163,9 @@ a.btn.default:active, a.btn.fwd:active, button.btn.default:active, button.btn.fw
   border-left: 1px solid #007acc;
   border-bottom: 1px solid #99d6ff;
   border-top: 1px solid #003d66;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
 }
 /* line 58, stylesheets/include/links/_onset.scss */
@@ -5028,12 +5183,13 @@ a.btn.default[disabled], a.btn.default.disabled, a.btn.fwd[disabled], a.btn.fwd.
   border-left: 1px solid #007acc;
   border-bottom: 1px solid #99d6ff;
   border-top: 1px solid #003d66;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   cursor: not-allowed;
 }
-/* line 84, style.scss */
+/* line 106, style.scss */
 a.btn.facebook, button.btn.facebook {
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI4N2VlYyIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMjM2N2JlIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMWI1MDkzIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), #2367be;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #287eec), color-stop(50%, #2367be), color-stop(100%, #1b5093)), #2367be;
@@ -5067,8 +5223,9 @@ a.btn.facebook:active, button.btn.facebook:active {
   border-left: 1px solid #1b5093;
   border-bottom: 1px solid #90b7ea;
   border-top: 1px solid #0b213d;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
 }
 /* line 58, stylesheets/include/links/_onset.scss */
@@ -5086,12 +5243,13 @@ a.btn.facebook[disabled], a.btn.facebook.disabled, button.btn.facebook[disabled]
   border-left: 1px solid #1b5093;
   border-bottom: 1px solid #90b7ea;
   border-top: 1px solid #0b213d;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   cursor: not-allowed;
 }
-/* line 85, style.scss */
+/* line 107, style.scss */
 a.btn.twitter, button.btn.twitter {
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ5YzVlZiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMmRhZGQ4Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMjE4ZGIxIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), #2dadd8;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #49c5ef), color-stop(50%, #2dadd8), color-stop(100%, #218db1)), #2dadd8;
@@ -5125,8 +5283,9 @@ a.btn.twitter:active, button.btn.twitter:active {
   border-left: 1px solid #218db1;
   border-bottom: 1px solid #aedff0;
   border-top: 1px solid #11485b;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
 }
 /* line 58, stylesheets/include/links/_onset.scss */
@@ -5144,12 +5303,13 @@ a.btn.twitter[disabled], a.btn.twitter.disabled, button.btn.twitter[disabled], b
   border-left: 1px solid #218db1;
   border-bottom: 1px solid #aedff0;
   border-top: 1px solid #11485b;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   cursor: not-allowed;
 }
-/* line 86, style.scss */
+/* line 108, style.scss */
 a.btn.google, button.btn.google {
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2NjYmJiYiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjYWFhYWFhIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjOTA5MDkwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), #aaaaaa;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ccbbbb), color-stop(50%, #aaaaaa), color-stop(100%, #909090)), #aaaaaa;
@@ -5183,8 +5343,9 @@ a.btn.google:active, button.btn.google:active {
   border-left: 1px solid #909090;
   border-bottom: 1px solid #f6f6f6;
   border-top: 1px solid #5d5d5d;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
 }
 /* line 58, stylesheets/include/links/_onset.scss */
@@ -5202,12 +5363,13 @@ a.btn.google[disabled], a.btn.google.disabled, button.btn.google[disabled], butt
   border-left: 1px solid #909090;
   border-bottom: 1px solid #f6f6f6;
   border-top: 1px solid #5d5d5d;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   cursor: not-allowed;
 }
-/* line 87, style.scss */
+/* line 109, style.scss */
 a.btn.back, a.btn.secondary, button.btn.back, button.btn.secondary {
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U5ZTJlMiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjY2NjY2NjIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYjNiM2IzIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), #cccccc;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e9e2e2), color-stop(50%, #cccccc), color-stop(100%, #b3b3b3)), #cccccc;
@@ -5241,8 +5403,9 @@ a.btn.back:active, a.btn.secondary:active, button.btn.back:active, button.btn.se
   border-left: 1px solid #b3b3b3;
   border-bottom: 1px solid white;
   border-top: 1px solid gray;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
 }
 /* line 58, stylesheets/include/links/_onset.scss */
@@ -5260,16 +5423,17 @@ a.btn.back[disabled], a.btn.back.disabled, a.btn.secondary[disabled], a.btn.seco
   border-left: 1px solid #b3b3b3;
   border-bottom: 1px solid white;
   border-top: 1px solid gray;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0 inset, rgba(255, 255, 255, 0.7) 0 1px 0px 0;
   cursor: not-allowed;
 }
-/* line 90, style.scss */
+/* line 112, style.scss */
 a.btn.back:before, button.btn.back:before {
   content: '\2190';
 }
-/* line 91, style.scss */
+/* line 113, style.scss */
 a.btn.fwd:after, button.btn.fwd:after {
   content: '\2192';
 }
